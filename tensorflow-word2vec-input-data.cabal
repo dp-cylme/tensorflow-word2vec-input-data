@@ -1,0 +1,37 @@
+name:                tensorflow-word2vec-input-data
+version:             0.1.0.0
+synopsis:            Downloader of input data for training word2vec.
+description:         Please see README.md
+homepage:            https://github.com/dp-cylme/tensorflow-word2vec-input-data#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Danil Petrov
+maintainer:          dpetrov@cyl.me
+copyright:           Copyright: (c) 2016 Danil Petrov
+category:            Web
+build-type:          Custom
+cabal-version:       >=1.22
+-- These files are downloaded automatically by Setup.hs. If the
+-- automatic downlaod fails, follow the instructions in error messages
+-- displayed by Setup.hs.
+data-dir:            data
+data-files:          *.zip
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     TensorFlow.Examples.Word2Vec.InputData
+  other-modules:       Paths_tensorflow_word2vec_input_data
+  default-language:    Haskell2010
+  build-depends:       Cabal
+                     , HTTP
+                     , base >= 4.7 && < 5
+                     , bytestring >= 0.10
+                     , cryptonite
+                     , directory >= 1.2
+                     , filepath >= 1.4
+                     , network-uri
+
+
+source-repository head
+  type:     git
+  location: https://github.com/dp-cylme/tensorflow-word2vec-input-data
